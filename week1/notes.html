@@ -9,16 +9,37 @@
 
 <body>
     <header>
-        <ol>
-
-        </ol>
-    </header>
-    <main>
         <h1>Notes</h1>
         <h2>Week 1</h2>
+        <h3>"But the Comforter, which is the Holy Ghost, whom the Father will send in my name, he shall teach you all
+            things, and bring all things to your remembrance, whatsoever I have said unto you."
+        </h3>
+        <h4 style="font-style: italic;">John 14:26</h4>
+    </header>
+    <main>
+
         <h3>How to link VS Code to github?</h3>
         <p>Get the link of the repository. It should be something like: "https://github.com/rjdaw/wdd330.git". <br>
             Add workspace and clone by pasting the link.</p>
+        <h3>Local Storage</h3>
+        <ul>
+            <li>localStorage.clear() to clear stored data</li>
+            <li>localStorage.setItem("name", "Ruben") sets the key as "name" and the value as "Ruben"</li>
+            <li>localStorage.removeitem("name") would remove the item that has the passed in key</li>
+            <li>localStorage.getItem("age") would allow us to get the value that matches the age key.</li>
+            <li>localStorage.key(1) would give us the key at index[1]</li>
+        </ul>
+        <h4>Example of Local Storage application</h4>
+        <fieldset>
+            <legend>Insert Data</legend>
+            <input id="inputKey" type="text" placeholder="Enter Key...">
+            <input id="inputValue" type="text" placeholder="Enter Value...">
+            <button id="insert" type="button">Insert Data</button>
+        </fieldset>
+        <fieldset>
+            <legend>Data Output</legend>
+            <div class="lsOutput"></div>
+        </fieldset>
     </main>
     <footer>
 
