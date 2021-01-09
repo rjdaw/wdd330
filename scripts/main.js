@@ -18,7 +18,7 @@ links.forEach (
 const inputKey = document.getElementById("inputKey");
 const inputValue = document.getElementById("inputValue");
 const insert = document.getElementById("insert");
-const lsOutput = document.getElementsByClassName("lsOutput");
+const lsOutput = document.getElementsById("lsOutput");
 
 insert.onclick = function () {
   const key = inputKey.value;
