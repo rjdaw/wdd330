@@ -15,10 +15,10 @@ links.forEach (
 )
 
 //Display local storage
-const inputKey = document.getElementById("inputKey");
+const inputKey   = document.getElementById("inputKey");
 const inputValue = document.getElementById("inputValue");
-const insert = document.getElementById("insert");
-const lsOutput = document.getElementsById("lsOutput");
+const insert     = document.getElementById("insert");
+const lsOutput   = document.getElementById("lsOutput");
 
 insert.onclick = function () {
   const key = inputKey.value;
@@ -28,12 +28,11 @@ insert.onclick = function () {
     localStorage.setItem(key, value);
     location.reload();
   }
+};
 
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i);
-    const value = localStorage.getItem(key);
+for (let i = 0; i < localStorage.length; i++) {
+  const key = localStorage.key(i);
+  const value = localStorage.getItem(key);
 
-    lsOutput.innerHTML += `${key}: ${value}<br>`;
-  }
-
+  lsOutput.innerHTML += `${key}: ${value}<br>`;
 }
