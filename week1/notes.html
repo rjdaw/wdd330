@@ -17,29 +17,92 @@
         <h4 style="font-style: italic;">John 14:26</h4>
     </header>
     <main>
+        <section>
+            <h3>How to link VS Code to github?</h3>
+            <p>Get the link of the repository. It should be something like: "https://github.com/rjdaw/wdd330.git". <br>
+                Add workspace and clone by pasting the link.</p>
+        </section>
+        <section>
+            <h3>Local Storage</h3>
+            <ul>
+                <li>localStorage.clear() to clear stored data</li>
+                <li>localStorage.setItem("name", "Ruben") sets the key as "name" and the value as "Ruben"</li>
+                <li>localStorage.removeItem("name") would remove the item that has the passed in key</li>
+                <li>localStorage.getItem("age") would allow us to get the value that matches the age key.</li>
+                <li>localStorage.key(1) would give us the key at index[1]</li>
+            </ul>
+            <h4>Example of Local Storage application</h4>
+            <code>
+                //Display local storage <br>
+                const inputKey = document.getElementById("inputKey"); <br>
+                const inputValue = document.getElementById("inputValue"); <br>
+                const btnInsert = document.getElementById("btnInsert"); <br>
+                const lsOutput = document.getElementById("lsOutput"); <br> <br>
 
-        <h3>How to link VS Code to github?</h3>
-        <p>Get the link of the repository. It should be something like: "https://github.com/rjdaw/wdd330.git". <br>
-            Add workspace and clone by pasting the link.</p>
-        <h3>Local Storage</h3>
-        <ul>
-            <li>localStorage.clear() to clear stored data</li>
-            <li>localStorage.setItem("name", "Ruben") sets the key as "name" and the value as "Ruben"</li>
-            <li>localStorage.removeItem("name") would remove the item that has the passed in key</li>
-            <li>localStorage.getItem("age") would allow us to get the value that matches the age key.</li>
-            <li>localStorage.key(1) would give us the key at index[1]</li>
+                btnInsert.onclick = function () { <br>
+                &nbsp; const key = inputKey.value; <br>
+                &nbsp; const value = inputValue.value; <br> <br>
+
+                &nbsp; if (key && value) { <br>
+                &nbsp; &nbsp; localStorage.setItem(key, value); <br>
+                &nbsp; &nbsp; location.reload(); <br>
+                &nbsp; } <br>
+                }; <br> <br>
+
+                for (let i = 0; i < localStorage.length; i++) { <br>
+                    &nbsp; const key = localStorage.key(i); <br>
+                    &nbsp; const value = localStorage.getItem(key); <br> <br>
+
+                    &nbsp; lsOutput.innerHTML += `${key}: ${value}< br>`; <br>
+                        } <br> <br>
+            </code>
+            <fieldset>
+                <legend>Insert Data</legend>
+                <input id="inputKey" type="text" placeholder="Enter Key...">
+                <input id="inputValue" type="text" placeholder="Enter Value...">
+                <button id="btnInsert" type="button">Store Data</button>
+            </fieldset>
+            <fieldset>
+                <legend>Data Output</legend>
+                <div id="lsOutput"></div>
+            </fieldset>
+        </section>
+        <section>
+            <h3>Master Mobile UX - Lesson 1</h3>
+            <h4>Step 1</h4>
+            <p>Trying to put a marshmallow into a piggy bank is neither simple nor beautiful. <br>
+                That is why we must design and develop the other way around, starting with the smallest device. <br>
+                Whatever you are doing <span style="font-weight: bold;">DO MOBILE FIRST!</span></p>
+
+            <h4>Step 2</h4>
+            <ol>
+                <li>Be present</li>
+                <li>Be useful</li>
+                <li>Be quick</li>
+            </ol>
+            <p>Things at the top of the screen tend to be harder to reach</p>
+            <h4>Step 3</h4>
+            <p>What if we put the nav bar at the bottom of the screen? <br>
+            It would make it easier for the user to reach.</p>
+            <p>The word "menu" is better than a hamburger. <br>
+            There is a better way to do things.</p>
+            <h4>Step 4</h4>
+            <ul>
+            <li>Make the user think less!</li>
+            <li>Display labels as placeholders.</li>
+            <li>Make the placeholder float above what the user writes so that he doesn't forget.</li>
+            <li>Increase height of fields to make it easier to tap.</li>
+            <li>Make a progress bar so the user knows how much more to do.</li>
+            <li>Enable autocomplete.</li>
+            <li>Show the password and offer the possibility to hide.</li>
+            <li>Bring in number pad when entering a number (e.g. phone number)</li>
         </ul>
-        <h4>Example of Local Storage application</h4>
-        <fieldset>
-            <legend>Insert Data</legend>
-            <input id="inputKey" type="text" placeholder="Enter Key...">
-            <input id="inputValue" type="text" placeholder="Enter Value...">
-            <button id="btnInsert" type="button">Insert Data</button>
-        </fieldset>
-        <fieldset>
-            <legend>Data Output</legend>
-            <div id="lsOutput"></div>
-        </fieldset>
+            <h4>Step 5</h4>
+            <p>Ads can be small and get bigger when you click on them instead of huge images that hurt readability. </p>
+            <p>A genius idea would be to have a window between content that shows full ad as you scroll.</p>
+            <p>Stop using pop-ups and pop-vers</p>
+            <p style="font-weight: bold;">Content first!</p>
+        </section>
     </main>
     <footer>
 
