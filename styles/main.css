@@ -1,7 +1,18 @@
+h1, h2 {
+    font-family: 'Yusei Magic', sans-serif;
+}
+
 ol {
     list-style: none;
 }
 
 a {
     text-decoration: none;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 24px;
+    color: #395C6B;
+}
+
+a:visited {
+    color: #5E0035;
 }
