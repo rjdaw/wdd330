@@ -3,11 +3,11 @@ let ol = document.querySelector('ol');
 const links = [
     {
         label: "Week 1 Notes",
-        url: "week1/notes.html"
+        url: "week1/index.html"
     },
     {
         label: "Week 2 Notes",
-        url: "week2/notes.html"
+        url: "week2/index.html"
     }
 ];
 
