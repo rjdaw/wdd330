@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 330 - Week 2</title>
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,7 +20,37 @@
         <h4 style="font-style: italic;">D&C 88:118</h4>
     </header>
     <main>
-        
+        <section>
+            <h3>Arrays</h3>
+            <p>I can declare an array as an object just like in Java. <br>
+            <code>const myArray = new Array();</code></p>
+            <p>I can swap two values from an array by doing something like this: <br>
+            <code>[x,y] = [y,x];</code></p>
+            <p>The shift() method pops the first item of the array, while the unshift() method adds an item at the start. <br>
+                <code>prophets.shift();</code> pops out Joseph Smith. <br>
+                <code>prophets.unshift('Joseph Smith');</code> would put him back at the start.
+            </p>
+            <p>concat merges the arrays <br>
+                <code>prophets.concat(['Gordon B. Hinckley', 'Thomas S. Monson', 'Russell M. Nelson']); </code> would add this array after the already existing prophets array
+            </p>
+            <p>slice takes a part of the array <br>
+            <code>prophets.slice(3, 5); </code>would give us the prophets starting at index 3 (4th prophet: Wilford Woodruff) and finish at the fifth position (Lorenzo Snow). In this case, it would return those two prophets.
+            </p>
+            <p>splice replaces parts of the array <br>
+            <code>prophets.splice(0, 1, 'Brigham Young')</code> would start deleting at index 0, delete 1 item, replace it with Brigham Young <br>
+        Note that if 0 item is removed, the item is simply inserted at the referenced index</p>
+        <p>Loop over arrays with the following: <code>for(const prophet of prophets) {what's inside the loop}</code></p>
+        </section>
+        <section>
+            <h3>Sets</h3>
+            <p>Sets cannot contain duplicate values.</p>
+            <code>const prophets = new Set();</code> creates a set
+        </section>
+        <section>
+            <h3>Ternary Operator</h3>
+            <p><code>condition ? (//code to run if condition is true) : (//code to run if condition is false)</code> <br>
+            Example: <code>n%2 === 0 ? console.log('n is an even number') : console.log('n is an odd number');</code></p>
+        </section>
     </main>
     <footer>
 
