@@ -22,7 +22,27 @@
         <h4 style="font-style: italic;">Psalm 25:5</h4>
     </header>
     <main>
-        
+        <section>
+            <h3>Object methods</h3>
+            <h4>Declare an object</h4>
+            <pre>let student = {
+    name: "Ruben",
+    age: 26
+};</pre>
+
+<h4>Create a method</h4>
+<pre>
+student.greetTeacher = function() {
+    alert("Hi Brother Thayne!");
+};
+
+student.greetTeacher(); // Hi Brother Thayne!</pre>
+
+<p>this.name => this is the current object</p>
+<p>student.name would technically be the same thing, but it can lead to errors.</p>
+<strong>Arrow functions have no "this"</strong>
+
+        </section>
     </main>
     <footer>
 
