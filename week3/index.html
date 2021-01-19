@@ -23,12 +23,21 @@
     </header>
     <main>
         <section>
-            <h3>Object methods</h3>
-            <h4>Declare an object</h4>
+            <h3>Objects</h3>
+            <h4>Creating objects</h4>
             <pre>let student = {
     name: "Ruben",
     age: 26
 };</pre>
+
+<pre>
+    const name = 'Superman';
+    const realName = 'Ruben Dawagne';
+    // long way
+    const ironMan = { name: name, realName: realName };
+    // what the cool kids do
+    const ironMan = { name, realName };
+</pre>
 
 <h4>Create a method</h4>
 <pre>
@@ -40,8 +49,70 @@ student.greetTeacher(); // Hi Brother Thayne!</pre>
 
 <p>this.name => this is the current object</p>
 <p>student.name would technically be the same thing, but it can lead to errors.</p>
-<strong>Arrow functions have no "this"</strong>
-
+<strong>Arrow functions have no "this"</strong> <br> <br>
+<strong>Objects are copied by reference</strong>
+<p>For example:</p>
+<pre>
+    const thor = { name: 'Thor' 
+    };
+    const cloneThor = thor;
+     
+    cloneThor.name = 'Clor';
+   
+    thor.name
+    // prints 'Clor'
+</pre>
+<p>The parse() method takes a string of data in JSON format and returns a JavaScript object:</p>
+<pre>
+JSON.parse(batman);
+<< { name: 'Batman',
+'real name': 'Bruce Wayne',
+height: 74,
+weight: 210,
+hero: true,
+villain: false,
+allies: [ 'Robin', 'Batgirl', 'Superman' ] }
+</pre>
+        </section>
+        <section>
+            <h3>The Document Object Model (DOM)</h3>
+            <p>You can use querySelector on :first-child, last child, etc.</p>
+            <pre>const wonderWoman = document.querySelector('li:last-child');</pre>
+            <p>Example of creating an element:</p>
+            <pre>
+    function createElement (tag,text) {
+    const el = document.createElement(tag);
+        el.textContent = text;
+        return el
+    }
+           
+    const aquaman = createElement('li','Aquaman');
+            </pre>
+            <p>Example of updating the CSS:</p>
+            <pre>
+    superman.style.border = "red 2px solid";
+            </pre>
+            <p>properties that include a '-' like background-color for example are camelCased. For example:</p>
+            <pre>superman.style.backgroundColor = 'blue';</pre>
+            <p>The <strong>classList</strong> property adds a class to an element.</p>
+            <pre>wonderWoman.classList.add('warrior');</pre>
+        </section>
+        <section>
+            <h3>Events</h3>
+            <p>Example of adding an event listener</p>
+            <pre>function doSomething() {
+    alert('You Clicked!');
+}
+addEventListener('click', doSomething);</pre>
+<p>It also works with arrow functions</p>
+<pre>addEventListener('click', () => alert('You Clicked!'));</pre>
+<p>There are lots of different events, including actions done with:</p>
+<ul>
+    <li>A mouse</li>
+    <li>A keyboard</li>
+    <li>A finger (touching the screen)</li>
+</ul>
+<p>You can remove an event using the <code>removeEventListener</code> method.</p>
         </section>
     </main>
     <footer>
