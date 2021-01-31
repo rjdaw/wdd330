@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 - Week 4</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles/week4.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <ol></ol>
+        <h1>Notes</h1>
+        <h2>Week 4</h2>
+        <h3>"Technology, when understood and used for righteous purposes, need not be a threat but rather an enhancement
+            to spiritual communication."
+        </h3>
+        <h4 style="font-style: italic;">Richard G. Scott</h4>
+    </header>
+    <main>
+        <section>
+            <h3>Code example</h3>
+            <h4>Creation of an object and how to append parts of it to a table</h4>
+            <table>
+                <thead>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>I-Number</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h3>Forms</h3>
+            <p>The following line of code would get the first form in the document with the [0]. A similar line with
+                forms[1] would get the second form.</p>
+            <pre>const form = document.forms[0];</pre>
+            <p>We can also look for a form by using its name the following way.</p>
+            <pre>const form = document.forms['hero'];</pre>
+            <p>Here is a great video I found that explains really well how to access form elements with JavaScript.</p>
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/VvB4gDYhcgo">
+            </iframe>
+        </section>
+        <section>
+            <h3>Object Oriented Programming in JavaScript</h3>
+            <p>Here is a way to create a constructor.</p>
+            <p>The "this" keyword indicated that the number of sides of the object by default is whatever is going to be passed in. In this case "6".</p>
+            <p>The roll function here is actually a method that is being created and that can be used by any instance of a dice from now on.</p>
+            <pre>
+const Dice = function(sides=6){
+    this.sides = sides;
+    this.roll = function() {
+        return Math.floor(this.sides * Math.random() + 1)
+    }
+}
+            </pre>
+            <p>If I wanted to create a 20-sided dice, I would do it the following way.</p>
+            <pre>const twentySided = new Dice(20);</pre>
+            <p>A more modern way to to this would be to use the class keyword and create a constructor function like so:</p>
+            <pre>
+class Dice {
+    constructor(sides=20) {
+        this.sides = sides;
+    }
+    roll() {
+        return Math.floor(this.sides * Math.random() + 1)
+    }
+}
+            </pre>
+            <p>JavaScript can use the "extends" keyword just like in Java.</p>
+            <p>JavaScript can also use getters and setters like in Java.</p>
+            <p>In JavaScript, you can chain functions like so:</p>
+            <pre>superman.fly().move().xray();</pre>
+            <p>Here is a nice video on classes in JavaScript.</p>
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/T-HGdc8L-7w">
+            </iframe>
+        </section>
+        <section>
+            <h3>Modern JavaScript Development</h3>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="../scripts/main.js"></script>
+    <script src="scripts/week4.js" type="module"></script>
+</body>
+
+</html>
