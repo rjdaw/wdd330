@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 - Week 5</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <ol></ol>
+        <h1>Notes</h1>
+        <h2>Week 5</h2>
+        <h3>"Never let a problem to be solved become more important than a person to be loved."
+        </h3>
+        <h4 style="font-style: italic;">Thomas S. Monson</h4>
+    </header>
+    <main>
+        <section>
+            <h3>Testing and Debugging</h3>
+            <h4>Alert</h4>
+            <p>The cool thing with <code>alert()</code> is that it stops a program from running until OK is clicked. That means we can use it as a breakpoint.</p>
+            <h4>Console</h4>
+            <p>Writing a few <code>console.log()</code> inside an if statement for example can be a good way to see what values are inside of certain variables</p>
+            <h4>Debugger</h4>
+            <p>Inside the web debugging tool (inspect), you can actually hover over a variable to check its value.</p>
+            <h4>Exceptions</h4>
+            <p>A <code>finally</code> block can be added after a catch block. This will always be executed after the try or catch block, regardless of whether an exception occurred or not. It is useful if you want some code to run in both cases.</p>
+            <h4>Test-driven Development (TDD)</h4>
+            <ol id="tdd">
+               <li>Write tests (that initially fail)</li>
+               <li>Write code to pass the tests</li>
+               <li>Refactor the code</li>
+               <li>Test refactored code</li>
+               <li>Write more tests for new features</li>
+            </ol>
+            <h4>Jest</h4>
+            <p>Jest is a TDD framework that allows you test files and functions very easily.</p>
+            <p>You can install it with the following command:</p>
+            <pre>npm install -g jest</pre>
+            <p>To actually test the file you'd like to test, simply navigate to the folder that contains that file and enter the following command:</p>
+            <pre>jest -c {}</pre>
+            <p>Here is an intro to Jest I want to watch later:</p>
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/FgnxcUQ5vho">
+            </iframe>
+        </section>
+        <section>
+            <h3>Project Management</h3>
+            <h4>Trello</h4>
+            <p>Trello divides work into teams, then into boards(projects). Boards are divided into tasks and tasks can be divided into smaller tasks inside of a checklist.</p>
+            <p>The Teamgantt power-up allows you to add Gantt charts to your project management.</p>
+            <p><strong>Advice from a teacher</strong>: Don't let tasks look empty. Try to fill them up with as many details as you can so that the members of the teams know exactly what they have to do. It is also useful for you because you can know how far team members are in each task.</p>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>
