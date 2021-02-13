@@ -22,8 +22,84 @@ body {
     margin: auto;
     top: 25px;
     right: 0;
-    bottom: 0;
     left: 0;
     padding: 20px 50px 20px 20px;
     font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    border: none;
+}
+
+.add-button {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    margin: auto;
+    top: 25px;
+    right: 40px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.add-button img {
+    height: 40px;
+    margin: auto;
+    top: 25px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.list {
+    position: absolute;
+    height: 75%;
+    width: 100%;
+    margin: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.list::-webkit-scrollbar {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.task {
+    position: relative;
+    height: fit-content;
+    height: 25px;
+    width: 55%;
+    right: 0;
+    transition: .4s;
+    padding: 10px;
+    background: lightgrey;
+    cursor: pointer;
+    padding-right: 80px;
+    word-wrap: normal;
+    margin: 15px;
+}
+
+.task:hover {
+    transform: scale(1.05);
+}
+
+.checkmark {
+    position: absolute;
+    margin: auto;
+    height: 20px;
+    top: 0;
+    right: 50px;
+    bottom: 0;
+}
+
+.archive {
+    position: absolute;
+    margin: auto;
+    height: 20px;
+    top: 0;
+    right: 10px;
+    bottom: 0;
 }
