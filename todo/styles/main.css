@@ -1,0 +1,29 @@
+body {
+    background: url("../images/pm-background.jpg");
+}
+
+.container {
+    position: absolute;
+    height: 400px;
+    width: 320px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 0 60px grey;
+    backdrop-filter: blur(10px);
+}
+
+.add-text {
+    position: absolute;
+    height: 5px;
+    width: 60%;
+    margin: auto;
+    top: 25px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px 50px 20px 20px;
+    font-family: 'Indie Flower', cursive;
+}
