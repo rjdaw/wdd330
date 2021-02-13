@@ -1,21 +1,20 @@
 body {
     background: url("../images/pm-background.jpg");
-}
+  }
 
-.container {
+  .container {
     position: absolute;
-    height: 400px;
+    height: 500px;
     width: 320px;
     margin: auto;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    box-shadow: 0 0 60px grey;
     backdrop-filter: blur(10px);
-}
-
-.add-text {
+    box-shadow: 0 0 60px grey;
+  }
+  .add-text {
     position: absolute;
     height: 5px;
     width: 60%;
@@ -23,83 +22,98 @@ body {
     top: 25px;
     right: 0;
     left: 0;
-    padding: 20px 50px 20px 20px;
+    outline: none;
+    border: none;
+    padding: 20px;
+    padding-right: 50px;
     font-family: 'Indie Flower', cursive;
     font-size: 20px;
-    border: none;
-}
-
-.add-button {
+  }
+  .add-button {
     position: absolute;
     height: 40px;
     width: 40px;
     margin: auto;
-    top: 25px;
-    right: 40px;
-    cursor: pointer;
     background: transparent;
     border: none;
-}
-
-.add-button img {
+    outline: none;
+    margin: auto;
+    top: 15px;
+    right: 35px;
+    cursor: pointer;
+  }
+  .add-button img {
     height: 40px;
+    width: 40px;
+    position: absolute;
     margin: auto;
     top: 25px;
     right: 0;
     bottom: 0;
-    left: 0;
-}
+    left: 0;  
+  }
 
-.list {
+  img:hover {
+    filter:opacity(.6);
+  }
+  .list {
     position: absolute;
-    height: 75%;
+    height: 80%;
     width: 100%;
     margin: auto;
+    margin-right: -8px;
     right: 0;
     bottom: 0;
     left: 0;
+    padding-right: 0;
     overflow-y: scroll;
     overflow-x: hidden;
-}
-
-.list::-webkit-scrollbar {
+  }
+  .list::-webkit-scrollbar {
     -webkit-appearance: none;
     appearance: none;
-}
-
-.task {
+  }
+  .task {
+    justify-items: center;
+    margin: auto;
     position: relative;
     height: fit-content;
-    height: 25px;
     width: 55%;
     right: 0;
-    transition: .4s;
+    left: 0;
+    text-align: left;
+    transition: 0.4s;
     padding: 10px;
-    background: lightgrey;
+    background: whitesmoke;
     cursor: pointer;
+    z-index: 4;
+    border-radius: 2px;
     padding-right: 80px;
     word-wrap: normal;
-    margin: 15px;
-}
-
-.task:hover {
-    transform: scale(1.05);
-}
-
-.checkmark {
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+  }
+  .task .checkmark {
     position: absolute;
     margin: auto;
-    height: 20px;
+    height: 30px;
     top: 0;
-    right: 50px;
     bottom: 0;
-}
-
-.archive {
+    right: 35px;
+    float: right;
+    z-index: +5;
+  }
+  .task .archive {
     position: absolute;
     margin: auto;
-    height: 20px;
+    height: 25px;
     top: 0;
+    bottom: 0;
     right: 10px;
-    bottom: 0;
-}
+    float: right;
+    z-index: +5;
+  }
+  .task:hover {
+    transform: scale(1.1);
+  }
+  
