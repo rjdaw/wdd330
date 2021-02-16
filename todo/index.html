@@ -17,6 +17,11 @@
 </header>
 
 <body>
+  <div class="btn-holder">
+    <button class="task-selector" id="all" onclick="showAll()">All</button>
+    <button class="task-selector" id="current" onclick="hideCompleted()">Active</button>
+    <button class="task-selector" id="completed" onclick="hideActive()">Completed</button>
+  </div>
   <div class="container">
     <input type="text" class="add-text" placeholder="Add a task...">
     <button class="add-button" onclick="addTask()">

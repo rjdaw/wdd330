@@ -1,6 +1,6 @@
 let tasks = [];
 
-window.onload = function() {
+window.onload = function () {
   if (JSON.parse(localStorage.getItem("tasks")) != null)
     tasks = JSON.parse(localStorage.getItem("tasks"));
   display();
@@ -27,31 +27,40 @@ function display() {
   document.querySelector(".list").innerHTML = "";
   for (let i = 0; i < tasks.length; i++)
     document.querySelector(".list").innerHTML +=
-      "<div class='task'>" +
-      tasks[i] +
-      "<img class='checkmark' src='images/checkmark.png' onclick='strike(" + i + ")'><img class='archive' src='images/archive.png' onclick='archive(" + i + ")'></div><br>";
+    "<div class='task active'>" +
+    tasks[i] +
+    "<img class='checkmark' src='images/checkmark.png' onclick='strike(" + i + ")'><img class='archive' src='images/archive.png' onclick='archive(" + i + ")'></div><br>";
 }
 
 function archive(index) {
   tasks.splice(index, 1);
-  if (localStorage.getItem("tasks") == null) {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  } else {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }
+  localStorage.setItem("tasks", JSON.stringify(tasks));
   display();
 }
 
 function strike(index) {
   if (tasks[index].includes("<strike>")) {
     tasks[index] = tasks[index].replace("<strike>", "");
+    tasks[index].classList.remove('struck');
   } else {
     tasks[index] = "<strike>" + tasks[index] + "</strike>";
+    tasks[index].classList.add('struck');
   }
-  if (localStorage.getItem("tasks") == null) {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  } else {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }
+  localStorage.setItem("tasks", JSON.stringify(tasks));
   display();
+}
+
+function hideCompleted() {
+  document.querySelectorAll('.struck').style.display = "none";
+  document.querySelectorAll('.active').style.display = "inline-block";
+}
+
+function hideActive() {
+  document.querySelectorAll('.active').style.display = "none";
+  document.querySelectorAll('.struck').style.display = "inline-block";
+}
+
+function showAll() {
+  document.querySelectorAll('.active').style.display = "inline-block";
+  document.querySelectorAll('.struck').style.display = "inline-block";
 }
