@@ -42,9 +42,11 @@ function strike(index) {
   if (tasks[index].includes("<strike>")) {
     tasks[index] = tasks[index].replace("<strike>", "");
     tasks[index].classList.remove('struck');
+    tasks[index].classList.add('active');
   } else {
     tasks[index] = "<strike>" + tasks[index] + "</strike>";
     tasks[index].classList.add('struck');
+    tasks[index].classList.remove('active');
   }
   localStorage.setItem("tasks", JSON.stringify(tasks));
   display();

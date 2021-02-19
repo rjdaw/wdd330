@@ -16,7 +16,7 @@ body {
 }
 
 .task-selector {
-    transition-duration: 0.4s;
+    transition-duration: 0.2s;
     background-color: lightgrey;
   color: black;
   border: 2px solid grey;
