@@ -66,7 +66,54 @@ All the following times, it will print ‘'Been there, got the T-Shirt'
 <section>
     <h3>Ajax</h3>
     <p>By the way, Ajax is one of my favorite heroes in Greek mythology.</p>
+    <p>Here is the basic syntax of the Fetch API</p>
+    <pre>
+    fetch('https://example.com/data')
+    .then( // code that handles the response )
+    .catch( // code that runs if the server returns an error )
+    </pre>
+    <p>The <code>redirect()</code> method redirects the user to another url.</p>
+    <pre>.then( response => response.redirect(newURL));</pre>
+    <p>JSON is the most common format for AJAX responses. Here is an example of how it could be resolved.</p>
+    <pre>
+        fetch(url)
+        .then( response => response.json() ); // transforms the JSON data into a JavaScript object
+        .then( data => console.log(Object.entries(data)) )
+        .catch( error => console.log('There was an error: ', error))
+    </pre>
+<p>Here is a challenge I'd like to complete:</p>
+<pre>
+    1. Go to https://jsonplaceholder.typicode.com/ and find the API call for getting the list of all users
+    2. Make a script or data flow in a tool/language of your choice to fetch the users list from the API
+    3. Have the script/flow transform the entire list of user data and submit to the API endpoint per the following requirements:
     
+    HTTP POST to ‘https://scheduler.luminarycxm.com/api/v1/cleaned/data/test/'
+    
+    content-type: application/json
+    
+    Request Body 
+    
+    {
+        “applicant”: “{enter your name here}”,
+        "users": [
+            { 
+                "first_name": "StringValue",
+                "last_name": "StringValue",
+                "company_name": "StringValue",
+                "company_full_address": "Street Address, City, State, Zip", 
+                "website": "StringValue",
+                "phone": 2083567880 
+            },
+        …
+        ]
+    }
+    
+    Successful 200 response 
+    {
+        “Success”: true, 
+         “message” : “thank you {your applicant name} for your application”
+    }
+</pre>
 </section>
 
     </main>
