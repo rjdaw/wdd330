@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 - Week 7</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <ol></ol>
+        <h1>Notes</h1>
+        <h2>Week 7</h2>
+        <h3>"Remembering may be one of the most precious gifts the Spirit can give you. "
+        </h3>
+        <h4 style="font-style: italic;">Henry B. Eyring</h4>
+    </header>
+    <main>
+        <section>
+            <h3>Further Functions</h3>
+<h4>Call and Apply Methods</h4>
+<p>The apply() method works the same way as the call() method apart from the fact that the arguments of the function are provided as an array, even if there is only one argument. For example: </p>
+<pre>square.call(null, 4)</pre>
+<p>would become</p>
+<pre>square.apply(null, [4])</pre>
+<strong>When would I use an IIFE?</strong>
+
+<h4>Functions that Define and Rewrite Themselves</h4>
+<p>The following function redefines itself.</p>
+<pre>
+function party(){
+    console.log('Wow this is amazing!');
+    party = function(){
+        console.log('Been there, got the T-Shirt');
+    }
+}
+</pre>
+<p>
+The first time through, it would print ‘Wow this is amazing!’ <br>
+All the following times, it will print ‘'Been there, got the T-Shirt'
+</p>
+<strong>Be careful! Doing that can make you lose properties!</strong>
+
+<h4>Event-driven Asynchronous Programming</h4>
+<pre>function wait(message, callback, seconds){
+    setTimeout(callback,seconds * 1000);
+    console.log(message);
+}</pre>
+<p>The seconds are timed by 1000 because it is really milliseconds.</p>
+<pre>
+    wait('This tape will self-destruct in five seconds ... ', selfDestruct, 5);
+    console.log('Hmmm, should I accept this mission or not ... ?');
+    << 'This tape will self-destruct in five seconds ... '
+    << 'Hmmm, should I accept this mission or not ... ? '
+    << 'BOOOOM!'
+</pre>
+<p>In the example above, the message is first displayed, then what's next is displayed even though it's outside the function. Finally the <code>selfDestruct</code> message is displayed after 5 seconds.</p>
+<p>I don't think I understood what a promise does.</p>
+<p>It would be fun to see how all those different types of functions are used/useful is real programming situations.</p>
+</section>
+<section>
+    <h3>Ajax</h3>
+    <p>By the way, Ajax is one of my favorite heroes in Greek mythology.</p>
+    
+</section>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>

@@ -16,3 +16,8 @@ a {
 a:visited {
     color: #5E0035;
 }
+
+header h4 {
+    padding-bottom: 20px;
+    border-bottom: 3px solid black;
+}
