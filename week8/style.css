@@ -1,0 +1,48 @@
+.initial {
+    background: radial-gradient(#e66465, #9198e5);
+    height: 150px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.translated {
+    background: radial-gradient(#e66465, #9198e5);
+    height: 150px;
+    width: 100px;
+    border-radius: 50%;
+    transform: translate(100px, 10px);
+}
+
+.scaled {
+    background: radial-gradient(#e66465, #9198e5);
+    height: 150px;
+    width: 100px;
+    border-radius: 50%;
+    transform: translate(100px, -10px) scaleX(1.9);
+}
+
+.rotated {
+    background: radial-gradient(#e66465, #9198e5);
+    height: 150px;
+    width: 100px;
+    border-radius: 50%;
+    transform: rotate(-35deg) translate(100px, 70px) scaleX(1.2);
+}
+
+.skewed {
+    transform: skew(5deg, 15deg) translate(700px, 120px) scaleX(2.5);
+}
+
+.transitioned {
+    background: radial-gradient(#e66465, #9198e5);
+    height: 150px;
+    width: 100px;
+    border-radius: 50%;
+    transition-duration: 600ms;
+    transition-delay: 200ms;
+}
+
+.transitioned:hover {
+    background: radial-gradient(#e664c6, #83dd8a);
+    transform: rotate(-35deg) translate(50px, 20px) scaleX(1.2);
+}
