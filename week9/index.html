@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 - Week 9</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <ol></ol>
+        <h1>Notes</h1>
+        <h2>Week 9</h2>
+        <h3>"It is in the doing, not just the thinking, that we accomplish our goals."
+        </h3>
+        <h4 style="font-style: italic;">Thomas S. Monson</h4>
+    </header>
+    <main>
+        <section>
+            <h3>The Window Object</h3>
+            <h4>window.something</h4>
+            <p>The window object is basically a global object.</p>
+            <p>alerts, confirms, and prompts are all derived from the window object.</p>
+            <p><code>window.navigator</code> gives information on the browser used by the user. It would give things
+                such as the name of the browser, the language, if cookies are enables, etc.</p>
+            <p><code>window.innerWidth & window.innerHeight</code> tell you how big your window is.</p>
+            <p><code>window.location</code> gives info on the url you are on.</p>
+            <p>Since window is an object. It can be called as so, meaning we can look for variables it contains. For
+                example:</p>
+            <ul>
+                <li><code>window.location.hostname</code></li>
+                <li><code>window.location.port</code></li>
+                <li><code>window.location.href</code></li>
+                <li><code>window.location.search</code></li>
+            </ul>
+            <p><code>window.history</code> gives information about previously visited pages.</p>
+            <p><code>window.history.length</code> for example, gives you the number of pages visited this session.</p>
+            <p><code>window.screen</code> has more uses for mobile devices. It also allows you to do things like turn
+                off the device’s screen, detect a change in its orientation or lock it in a specific orientation.</p>
+            <h4>document.something</h4>
+            <p><code>document.write()</code> shouldn't be used anymore to output things to the screen.</p>
+            <p><code>document.cookie</code> can be used to save some pieces of information from one page to another.</p>
+            <p><code>window.setTimeout()</code> can be used to invoke a function after a set amount of time. It can be
+                canceled using <code>clearTimeout()</code>.</p>
+            <p><code>window.setInterval()</code> can be used to repeatedly invoke a function. It can be stopped using
+                <code>clearInterval()</code>.
+            </p>
+        </section>
+        <section>
+            <h3>HTML5 APIs</h3>
+            <h4>data- attributes</h4>
+            <p><code>data- attributes</code> are a way of embedding data in a web page using custom attributes that are
+                ignored by the browser.</p>
+            <p>One of those uses is the lazy loading for example.</p>
+            <h4>APIs</h4>
+            <p>The Web Storage API works like the cookies in PHP with key-value pairs.</p>
+            <p>The Geolocation API gets the location of the user's device.</p>
+            <p>The Web Worker API makes heavier tasks or tasks that could take longer to be run in the background to
+                avoid unresponsive pages or other problems.</p>
+            <p>There is a Notification API that displays notifications.</p>
+            <p>The Media API along with the &lt;audio&gt; and &lt;video&gt; elements allow you to embed audios and
+                videos in web pages.</p>
+            <p>I found a playlist of many videos on HTML5 APIs</p>
+            <p>There very cool things like a Vibration API, Screen Orientation API, and others.</p>
+            <a href="https://www.youtube.com/playlist?list=PLyuRouwmQCjlBGMxI_0Ly_Dw-vrniOYNh" target="_blank">HTML5
+                APIs Playlist</a>
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>
