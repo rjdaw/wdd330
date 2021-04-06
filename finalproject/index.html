@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | iQuill</title>
+    <link rel="stylesheet" href="small.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>iQuill</h1>
+
+    <a href="#note-template" class="access-template">Grab Quill</a>
+    <button id="night-mode" onclick="nightMode()">&#x263d;</button>
+    <button id="day-mode" onclick="dayMode()">&#9788;</button>
+
+    <div id="note-template">
+
+        <h2>I can't forget this</h2>
+
+        <label for="name">Name</label>
+        <input type="text" id="name">
+
+        <label for="description">GM Description</label>
+        <input type="text" id="description">
+
+        <label for="forpcs">What the PCs know</label>
+        <input type="text" id="forpcs">
+
+        <section class="btn-grid">
+            <button id="add-note" onclick="addNote()">Make a note</button>
+            <div class="drop-div">
+                <a href="#leave-template" class="drop-quill">Drop Quill</a>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="all-notes">
+
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+* {
+    font-family: 'Bad Script', cursive;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background:url(images/parchemin.jpg)
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.access-template {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    background-color: #e16b5a;
+    color: black;
+    width: 120px;
+    padding: 10px;
+    border-radius: 2px;
+    text-align: center;
+    font-weight: bold;
+    transition-duration: .2s;
+}
+
+#night-mode {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    background-color: #000940;
+    color: #c5f9a3;
+    width: 50px;
+    padding: 10px;
+    border-radius: 2px;
+    text-align: center;
+    font-weight: bold;
+    transition-duration: .2s;
+    border: none;
+}
+
+#day-mode {
+    display: none;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    background-color: #e16b5a;
+    color: #e3dccb;
+    width: 50px;
+    padding: 10px;
+    border-radius: 2px;
+    text-align: center;
+    font-weight: bold;
+    transition-duration: .2s;
+    border: none;
+}
+
+#add-note {
+    background-color: #e16b5a;
+    color: black;
+    width: 120px;
+    padding: 8px;
+    border-radius: 2px;
+    text-align: center;
+    font-weight: bold;
+    transition-duration: .2s;
+    border: none;
+    font-size: 20px;
+    justify-self: center;
+}
+
+.drop-div {
+    background-color: black;
+    color: #e16b5a;
+    width: 100px;
+    padding: 8px;
+    margin-top: 15px;
+    border-radius: 2px;
+    text-align: center;
+    font-weight: bold;
+    transition-duration: .2s;
+    border: none;
+    font-size: 16px;
+    justify-self: center;
+}
+
+.drop-div a:visited {
+    color: #e16b5a;
+}
+
+.access-template:hover, #add-note:hover, .drop-div:hover {
+    transform: scale(1.1);
+    opacity: .95;
+}
+
+input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+
+button:focus {
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+#note-template {
+    position: fixed;
+    z-index: 9999;
+    opacity: 0;
+    transition: .2s ease-in;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#note-template:target {
+    opacity: 1;
+    width: 85%;
+    pointer-events: auto;
+    background: rgba(0, 0, 0, .05);
+    margin: 10% auto;
+    padding: 30px;
+    backdrop-filter: blur(8px);
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.note {
+    padding: 15px;
+    margin: 5px 0;
+    border: 1px solid rgba(225,107,90, .3);
+    font-size: 22px;
+    background-color: rgba(255,235,205, .5);
+}
+
+.description {
+margin-top: 5px;
+}
+
+.gm-desc-h {
+    padding-top: 5px;
+    border-top: 1px solid black;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.gm-desc {
+    font-size: 17px;
+}
+
+.note img {
+    float: right;
+    padding: 5px;
+}
+
+.edit-quill {
+    width: 25px;
+    height: 25px;
+}
+
+.delete-flame {
+    width: 27px;
+    height: 27px;
+}
