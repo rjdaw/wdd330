@@ -30,9 +30,6 @@
         <label for="description">GM Description</label>
         <input type="text" id="description">
 
-        <label for="forpcs">What the PCs know</label>
-        <input type="text" id="forpcs">
-
         <section class="btn-grid">
             <button id="add-note" onclick="addNote()">Make a note</button>
             <div class="drop-div">
@@ -42,10 +39,25 @@
 
     </div>
 
+    <div id="edit-template">
+        <h2>This needs to be changed</h2>
+
+        <label for="new-name">Name</label>
+        <input type="text" id="new-name">
+
+        <label for="new-description">GM Description</label>
+        <input type="text" id="new-description">
+        <section class="btn-container">
+            <button id="edit-note">Correct note</button>
+        </section>
+    </div>
+
     <div class="all-notes">
 
     </div>
-
+    <footer>
+        <p class="copyright">&#169; 2021 | Ruben Dawagne</p>
+    </footer>
     <script src="script.js" type="module"></script>
 </body>
 

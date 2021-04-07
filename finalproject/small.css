@@ -67,7 +67,7 @@ a {
     border: none;
 }
 
-#add-note {
+#add-note, #edit-note {
     background-color: #e16b5a;
     color: black;
     width: 120px;
@@ -79,6 +79,19 @@ a {
     border: none;
     font-size: 20px;
     justify-self: center;
+}
+
+#edit-template {
+    position: fixed;
+    z-index: 9995;
+    transition: .2s ease-in;
+    flex-direction: column;
+    display: none;
+    width: 85%;
+    background: rgba(0, 0, 0, .05);
+    margin: 10% auto;
+    padding: 30px;
+    backdrop-filter: blur(8px);
 }
 
 .drop-div {
@@ -146,6 +159,12 @@ input:focus {
     grid-template-rows: 1fr 1fr;
 }
 
+.btn-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
 .note {
     padding: 15px;
     margin: 5px 0;
@@ -182,4 +201,16 @@ margin-top: 5px;
 .delete-flame {
     width: 27px;
     height: 27px;
+}
+
+.note:last-child {
+    margin-bottom: 150px;
+}
+
+.copyright {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 80px;
 }

@@ -27,9 +27,9 @@ function display() {
   document.querySelector(".list").innerHTML = "";
   for (let i = 0; i < tasks.length; i++)
     document.querySelector(".list").innerHTML +=
-    "<div class='task active'>" +
+    "<div class='task task" + `${i}` + " active'><span class='task" + `${i}` + "'>" +
     tasks[i] +
-    "<img class='checkmark' src='images/checkmark.png' onclick='strike(" + i + ")'><img class='archive' src='images/archive.png' onclick='archive(" + i + ")'></div><br>";
+    "</span><img class='checkmark' src='images/checkmark.png' onclick='strike(" + i + ")'><img class='archive' src='images/archive.png' onclick='archive(" + i + ")'></div><br>";
 }
 
 function archive(index) {
@@ -39,30 +39,43 @@ function archive(index) {
 }
 
 function strike(index) {
-  if (tasks[index].includes("<strike>")) {
-    tasks[index] = tasks[index].replace("<strike>", "");
-    tasks[index].classList.remove('struck');
-    tasks[index].classList.add('active');
+  if (document.querySelector(`.task${index}`).classList.contains('struck')) {
+    document.querySelector(`.task${index}`).classList.remove('struck');
+    document.querySelector(`.task${index}`).classList.add('active');
+    document.querySelector(`.task${index}`).style.textDecoration = "none";
   } else {
-    tasks[index] = "<strike>" + tasks[index] + "</strike>";
-    tasks[index].classList.add('struck');
-    tasks[index].classList.remove('active');
+    document.querySelector(`.task${index}`).style.textDecoration = "line-through";
+    document.querySelector(`.task${index}`).classList.add('struck');
+    document.querySelector(`.task${index}`).classList.remove('active');
   }
-  localStorage.setItem("tasks", JSON.stringify(tasks));
-  display();
 }
 
+let allStruck = document.querySelectorAll('.struck');
+let allActive = document.querySelectorAll('.active');
+
 function hideCompleted() {
-  document.querySelectorAll('.struck').style.display = "none";
-  document.querySelectorAll('.active').style.display = "inline-block";
+  let allStruck = document.querySelectorAll('.struck');
+  let allActive = document.querySelectorAll('.active');
+  for (let i = 0; i < allStruck.length; i++) {
+    allStruck[i].style.display = 'none';
+    allActive[i].style.display = 'block';
+  }
 }
 
 function hideActive() {
-  document.querySelectorAll('.active').style.display = "none";
-  document.querySelectorAll('.struck').style.display = "inline-block";
+  let allStruck = document.querySelectorAll('.struck');
+  let allActive = document.querySelectorAll('.active');
+  for (let i = 0; i < allStruck.length; i++) {
+    allStruck[i].style.display = 'block';
+    allActive[i].style.display = 'none';
+  }
 }
 
 function showAll() {
-  document.querySelectorAll('.active').style.display = "inline-block";
-  document.querySelectorAll('.struck').style.display = "inline-block";
+  let allStruck = document.querySelectorAll('.struck');
+  let allActive = document.querySelectorAll('.active');
+  for (let i = 0; i < allStruck.length; i++) {
+    allStruck[i].style.display = 'block';
+    allActive[i].style.display = 'block';
+  }
 }
