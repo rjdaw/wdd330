@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/main.css">
 </head>
 
 <body>
-    <nav></nav>
+    <nav>
+        <button id="menu-button" onclick="toggleMenu()">&#9776;
+        </button>
+        <ol id="responsive-nav" class="hide"></ol>
+      </nav>
     <h1>Play Tic Tac Toe!</h1>
     <div class="board-wrapper">
         <div class="board">
@@ -28,8 +33,7 @@
     <button type="button">Reset</button>
 
     <script src="team.js"></script>
-    <script src="../js/links.js"></script>
-    <script src="../js/createNav.js"></script>
+    <script src="../scripts/main.js"></script>
 </body>
 
 </html>

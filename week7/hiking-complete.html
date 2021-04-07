@@ -6,15 +6,22 @@
   <title>Great Hikes (dynamic DOM example)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../styles/main.css">
 </head>
 
 <body>
+  <nav>
+    <button id="menu-button" onclick="toggleMenu()">&#9776;
+    </button>
+    <ol id="responsive-nav" class="hide"></ol>
+  </nav>
   <main>
     <h1>Great hikes</h1>
     <ul id="hikes" class="hikeStyles"></ul>
   </main>
 
   <script src="app5.js" type="module"></script>
+  <script src="../scripts/main.js"></script>
 </body>
 
 </html>

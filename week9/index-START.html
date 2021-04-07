@@ -5,10 +5,15 @@
     <meta charset="UTF-8">
     <title>JS Drum Kit</title>
     <link rel="stylesheet" href="team-activity.css">
+    <link rel="stylesheet" href="../styles/main.css">
 </head>
 
 <body>
-
+    <nav>
+        <button id="menu-button" onclick="toggleMenu()">&#9776;
+        </button>
+        <ol id="responsive-nav" class="hide"></ol>
+    </nav>
 
     <div class="keys">
         <div data-key="65" data-count="0" class="key">
@@ -87,7 +92,7 @@
             })
         })
     </script>
-
+    <script src="../scripts/main.js"></script>
 
 </body>
 

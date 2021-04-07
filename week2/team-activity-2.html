@@ -5,10 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Activity 2</title>
+    <link rel="stylesheet" href="../styles/main.css">
 </head>
 
 <body>
-    <nav></nav>
+    <nav>
+        <button id="menu-button" onclick="toggleMenu()">&#9776;
+        </button>
+        <ol id="responsive-nav" class="hide"></ol>
+      </nav>
     <section>
         <h2>I/O</h2>
         <input type="text" id="input" name="input">
@@ -42,9 +47,8 @@
         <input type="text" id="num4" name="num4">
         <div id="superOutput"></div>
     </section>
-    <script src="scripts/script.js"></script>
-    <script src="../js/links.js"></script>
-    <script src="../js/createNav.js"></script>
+    <script src="script.js"></script>
+    <script src="../scripts/main.js"></script>
 </body>
 
 </html>

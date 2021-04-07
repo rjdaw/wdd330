@@ -16,9 +16,19 @@ const links = [
         class: "notes"
     },
     {
+        label: "Team activity 2",
+        url: "../week2/team-activity-2.html",
+        class: "team"
+    },
+    {
         label: "Week 3 Notes",
         url: "../week3/index.html",
         class: "notes"
+    },
+    {
+        label: "Team activity 3",
+        url: "../week3/team-activity.html",
+        class: "team"
     },
     {
         label: "Week 4 Notes",
@@ -26,9 +36,19 @@ const links = [
         class: "notes"
     },
     {
+        label: "Team activity 4",
+        url: "../week4/tictactoe.html",
+        class: "team"
+    },
+    {
         label: "Week 5 Notes",
         url: "../week5/index.html",
         class: "notes"
+    },
+    {
+        label: "Team activity 5",
+        url: "../week5/team-activity.html",
+        class: "team"
     },
     {
         label: "To Do List",
@@ -41,9 +61,19 @@ const links = [
         class: "notes"
     },
     {
+        label: "Team activity 7",
+        url: "../week7/hiking-complete.html",
+        class: "team"
+    },
+    {
         label: "Week 8 Notes",
         url: "../week8/index.html",
         class: "notes"
+    },
+    {
+        label: "Team activity 8",
+        url: "../week8/team-activity.html",
+        class: "team"
     },
     {
         label: "Week 9 Notes",
@@ -51,10 +81,25 @@ const links = [
         class: "notes"
     },
     {
+        label: "Team activity 9",
+        url: "../week9/index-START.html",
+        class: "team"
+    },
+    {
         label: "Week 10 Notes",
         url: "../week10/index.html",
         class: "notes"
-    }
+    },
+    {
+        label: "Team activity 10",
+        url: "../week10/team-activity.html",
+        class: "team"
+    },
+    {
+        label: "iQuill Project",
+        url: "../finalproject/index.html",
+        class: "project"
+    },
 ];
 
 links.forEach(
