@@ -1,42 +1,95 @@
-import { Comment } from './comment.js';
-const comments = [];
+class CommentModel {
+    constructor(type) {
+        this.type = type;
+        this.comments = readFromLS(this.type) || [];
+    }
 
-// add eventListener
-function listenForClick(){
-    document.querySelector('#submit-comment').addEventListener('click', readComment);
+    getComments(q = null) {
+        if (q === null) {
+            return this.comments;
+        } else {
+            return this.comments.filter(el => el.name === q);
+        }
+    }
+
+    addComment(postName, comment) {
+        const newComment = {
+            name: postName,
+            commetn: comment,
+            date: new Date()
+        };
+        this.comments.push(newComment);
+        writeToLS(this.type, this.comments);
+    }
 }
 
-// method to readComment
-function readComment() {
-    return document.querySelector('#comment-area').value;
+function writeToLS(key, data) {
+    window.localStorage.setItem(key, JSON.stringify(data));
 }
 
-// method to add Comment
-function addComment(newComment, hikeId) {
-    let brandNewComment = new Comment(newComment, hikeId);
-    comments.push(brandNewComment);
+function readFromLS(key) {
+    return JSON.parse(window.localStorage.getItem(key));
 }
 
-// filterCommentsByHike
-function filterCommentsByHike(comments, hike) { // hike is a hikeId
-    return comments.filter(comment => {
-        comment.hikeId == hike;
+const commentUI = `div class="addComment">
+<h2>Add a comment</h2>
+<input type="text" id="commentEntry" />
+<button id="commentSubmit">Comment</button>
+</div>
+<h2>Comments</h2>
+<ul class="comments"></ul>`;
+
+function renderCommentList(element, comments) {
+    element.innerHTML = '';
+
+    comments.forEach(el => {
+        let item = document.createElement('li');
+        item.innerHTML = `
+        ${el.name}: ${el.comment}`;
+
+        element.appendChild(item);
     })
 }
 
-// renderCommentList
-function renderCommentList(filteredComments) {
-    let commentList = document.createElement('ul');
+class Comments {
+    constructor(type, commentElementId) {
+        this.type = type;
+        this.commentElementId = commentElementId;
+        this.model = new CommentModel(this.type);
+    }
 
-    filteredComments.map(comment => {
-        let li = document.createElement('li');
-        let date = document.createElement('p');
-        let content = document.createElement('p');
-        date.textContent = commment.Date;
-        content.textContent = comment.comment;
-        li.appendChild(date);
-        li.appendChild(content);
-        commentList.appendChild(li);
-    })
-    document.querySelector("#commentsDiv").appendChild(commentList);
+    addSubmitListener(postName) {
+        document.getElementById('commentSubmit').ontouchend = () => {
+            this.model.addComment(
+                postName,
+                document.getElementById('commentEntry').value);
+            document.getElementById('commentEntry').value = '';
+            this.showCommentList(postName);
+        };
+    }
+
+    showCommentList(q = null) {
+        try {
+            const parent = document.getElementById(this.commentElementId);
+            if (!parent) throw new Error('comment parent not found');
+            if (parent.innerHTML === '') {
+                parent.innerHTML = commentUI;
+            }
+            if (q !== null) {
+                document.querySelector('.addComment').style.display = 'block';
+                this.addSubmitListener(q);
+            } else {
+                document.querySelector('.addComment').style.display = 'none';
+            }
+            let comments = this.model.getComments(q);
+            if (comments === null) {
+                comments = [];
+            }
+            renderCommentList(parent.lastChild, comments);
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
+
+export default Comments;

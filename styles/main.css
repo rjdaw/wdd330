@@ -17,7 +17,76 @@ a:visited {
     color: #5E0035;
 }
 
-header h4 {
+h4 {
     padding-bottom: 20px;
     border-bottom: 3px solid black;
+}
+
+/* Menu */
+
+#responsive-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hide {
+    display: none;
+}
+
+nav {
+    background-color: white;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+nav ol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: 9999;
+}
+
+nav li {
+    text-align: center;
+    z-index: 9999;
+}
+
+nav button {
+    margin: .7rem .5rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.4rem;
+    z-index: 9999;
+}
+
+li a:link {
+    display: block;
+    color: #094d92;
+    text-decoration: none;
+    border-top: 1px solid #0c7489;
+    padding: 10px;
+    font-size: 18px;
+}
+
+li a:visited {
+    color: #0c7489;
+}
+
+li a:hover {
+    background-color: rgba(203, 247, 251, .4);
+    color: black;
+    padding: 15px;
+    font-size: larger;
+}
+
+li:last-child a:hover {
+    border-radius: 0 0 5px 5px;
+}
+
+/*******/
+
+button {
+    outline: none;
 }

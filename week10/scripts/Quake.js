@@ -16,4 +16,3 @@ export default class Quake {
     return this._quakes.features.filter(item => item.id === id)[0];
   }
 }
-           

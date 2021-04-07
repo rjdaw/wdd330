@@ -14,8 +14,12 @@ export function getJSON(url) {
         });
 }
 
-export const getLocation = async function(options) {
-    return new Promise(function(resolve, reject) {
+export const getLocation = async function (options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+}) {
+    return new Promise(function (resolve, reject) {
         navigator.geolocation.getCurrentPosition(resolve, reject, options);
     });
 };
